@@ -72,6 +72,6 @@ cd $LIB_PATH
 # done
 
 for l in `echo -ne "libavcodec\nlibavdevice\nlibavformat\nlibavutil\nlibswscale"`; do
-  lipo -create "i386/$l/$l.a" "armv7/$l/$l.a" "armv7s/$l/$l.a" -output "$l.a";
+  lipo -create "armv7/$l/$l.a" "armv7s/$l/$l.a" -output "$l.a";
 done
 
